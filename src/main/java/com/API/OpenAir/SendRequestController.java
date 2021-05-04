@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 public class SendRequestController {
 
 	private static final String openAirUrl="https://cervello.app.openair.com/api.pl";
-	@CrossOrigin(origins="https://c.cs17.visual.force.com")
+	@CrossOrigin(origins={"https://c.cs17.visual.force.com","https://voracious-dev-ed--c.visualforce.com"})
 	@PostMapping(value="/SendRequest",produces = { "application/xml" })
 	public String login(@RequestBody String body) {
 		 RestTemplate restTemplate = new RestTemplate();
